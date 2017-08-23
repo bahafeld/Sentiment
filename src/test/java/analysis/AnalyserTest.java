@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class AnalyserTest {
     
-    Analyser analyser = new Analyser();
+    private Analyser analyser = new Analyser();
     
     @Test
     public void testGoodSentiment() {
@@ -30,8 +30,8 @@ public class AnalyserTest {
     
     @Test
     public void testVeryBadSentiment() {
-        assertEquals(0, analyser.findSentiment("You are very smart"));
-//        assertEquals(0, analyser.findSentiment("Bad"));
+        assertEquals(3, analyser.findSentiment("You are very smart"));
+        assertEquals(0, analyser.findSentiment("Bad"));
     }
     
     @Test
